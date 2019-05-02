@@ -1,0 +1,9 @@
+{
+  "public": {},
+  "private": {},
+  "redisOplog": {
+    "debug": false,
+    "externalRedisPublisher": true,
+    "globalRedisPrefix": "meteor."
+  }
+}

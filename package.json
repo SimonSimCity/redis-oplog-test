@@ -1,0 +1,21 @@
+{
+  "name": "redis-oplog-test",
+  "private": true,
+  "scripts": {
+    "test": "npm run --silent test1 && npm run --silent test2 && npm run --silent test3",
+    "test1": "meteor --once",
+    "test2": "meteor --once --extra-packages 'cultofcoders:redis-oplog, disable-oplog' -s settings-oplog.json",
+    "test3": "meteor --once --extra-packages 'cultofcoders:redis-oplog, disable-oplog' -s settings-external-publisher.json"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "chai": "^4.2.0",
+    "meteor-node-stubs": "^0.4.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": false,
+      "server": "server/main.js"
+    }
+  }
+}
